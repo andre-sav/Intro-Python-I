@@ -1,11 +1,3 @@
-# Experiment with positional arguments, arbitrary arguments, and keyword
-# arguments.
-
-# Write a function f1 that takes two integer positional arguments and returns
-# the sum. This is what you'd consider to be a regular, normal function.
-
-# YOUR CODE HERE
-
 def f1(x, y):
     return x + y
 
@@ -18,7 +10,7 @@ def f2(*integers):
     sum = 0
     for i in integers:
         sum += i
-    return result
+    return sum
     
 
 # YOUR CODE HERE
@@ -57,7 +49,7 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**kwargs):
-    print(str(kwargs)
+    print(str(kwargs))
 
 # Should print
 # key: a, value: 12
