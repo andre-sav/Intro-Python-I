@@ -34,14 +34,18 @@ from datetime import date
 
 def build_calendar(month=date.today().month, year=date.today().year):
     
-    if len(sys.argv) == 2:
-        month = int(sys.argv[1])
-        print(calendar.month(year, month))
-    elif len(sys.argv) == 3:
-        month = int(sys.argv[1])
-        year = int(sys.argv[2])
-        print(calendar.month(year, month))
-    else:
-        print(calendar.month(year, month))
+    try:
+        if len(sys.argv) == 2:
+            month = int(sys.argv[1])
+            print(calendar.month(year, month))
+        elif len(sys.argv) == 3:
+            month = int(sys.argv[1])
+            year = int(sys.argv[2])
+            print(calendar.month(year, month))
+        else:
+            print(calendar.month(year, month))
+    except:
+        print("ERROR: Should be in format '14_cal.py [month] [year]'")
+        exit(0)
 
 build_calendar()    
